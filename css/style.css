@@ -1,247 +1,235 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
+ol, ul, li {
+  list-style: none;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: #24352a;
+    color: #D5D6C7;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+.footer-container h2 {
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    padding: 16px;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
+.categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 32px;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+.category-name {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    font-weight: 600;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+.category-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 18px;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+/*/////////////////////////////////////////////// SECTION FOOTER 1 ///////////////////////////////////////////////////*/
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+.section-footer-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 200px;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+.institutional {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
 
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+.institutional ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
+.institutional ul li:hover {
+    cursor: pointer;
     text-decoration: underline;
-  }
+}
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
+.service {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
+.service div {
+    display: flex;
+    flex-direction: column;
+}
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
 
-  pre {
-    white-space: pre-wrap !important;
-  }
+/*/////////////////////////////////////////////// SECTION FOOTER 2 ///////////////////////////////////////////////////*/
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+.section-footer-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 200px;
+}
 
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
+.products ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+}
 
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+.products ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/*/////////////////////////////////////////////// SECTION FOOTER 3 ///////////////////////////////////////////////////*/
+
+.section-footer-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 200px;
+}
+
+.my-account {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.my-account ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+}
+
+.my-account ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*/////////////////////////////////////////////// SECTION FOOTER 4 ///////////////////////////////////////////////////*/
+
+.payment {
+    width: 150px;
+    height: 60px;
+}
+
+/*/////////////////////////////////////////////// SECTION FOOTER 5 ///////////////////////////////////////////////////*/
+
+.section-footer-5 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 200px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.email-label {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    color: rgba(255,255,255, 40%);
+}
+
+.email-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255, 20%);
+    padding: 6px;
+}
+
+.social-networks {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.social-networks ul {
+    display: flex;
+    gap: 6px;
+}
+
+.social-networks ul li {
+    width: 26px;
+    height: 26px;
+    background: #D5D6C7;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.social-networks ul li a {
+    cursor: pointer;
+}
+
+.icons {
+    color: #24352a;
+}
+
+/*/////////////////////////////////////////////// NAMING RIGHTS ///////////////////////////////////////////////////*/
+
+.naming-rights {
+    padding: 12px 32px;
+    border-top: 1px solid rgba(255,255,255, 10%);
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
 }
 
