@@ -247,9 +247,7 @@ body {
   }
 
   .footer-container {
-    align-items: center;
-    justify-content: center;
-    max-width: 160px;
+    max-width: 100%;
   }
 
   .footer-container h2 {
@@ -259,8 +257,6 @@ body {
   .categories {
     flex-direction: column;
     max-width: 100%;
-    align-items: center;
-    justify-content: center;
   }
 
   .category-name {
@@ -337,7 +333,7 @@ body {
   }
 
   .naming-rights {
-    max-width: 320px;
+    max-width: 100%;
     font-size: 6px;
     padding: 4px;
   }
