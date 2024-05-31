@@ -338,6 +338,8 @@ body {
   .section-footer-4 {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .section-footer-4 .payment {
@@ -367,6 +369,10 @@ body {
   .email-input {
     padding: 0;
     width: 100px;
+  }
+
+  .social-networks ul {
+    justify-content: center;
   }
 
   .social-networks ul li {
