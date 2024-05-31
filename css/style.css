@@ -251,6 +251,7 @@ body {
   }
 
   .footer-container h2 {
+    text-align: center;
     font-size: 12px;
   }
 
@@ -264,12 +265,30 @@ body {
   }
 
   .section-footer-1 {
+    align-items: center;
+    justify-content: center;
     max-width: 100%;
     gap: 16px;
   }
 
+  .institutional {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
   .institutional ul {
+    align-items: center;
     font-size: 8px;
+    width: 100%;
+  }
+
+  .service {
+    align-items: center;
+  }
+
+  .service div {
+    align-items: center;
   }
 
   .service div span {
@@ -277,25 +296,48 @@ body {
   }
 
   .section-footer-2 {
+    align-items: center;
+    justify-content: center;
     max-width: 100%;
     gap: 16px;
   }
 
+  .products {
+    align-items: center;
+  }
+
   .products ul {
+    align-items: center;
     font-size: 8px;
   }
 
+  .location {
+    align-items: center;
+  }
+
   .category-item {
+    align-items: center;
     font-size: 8px;
   }
 
   .section-footer-3 {
+    align-items: center;
     max-width: 100%;
     gap: 16px;
   }
 
+  .my-account {
+    align-items: center;
+  }
+
   .my-account ul {
+    align-items: center;
     font-size: 8px;
+  }
+
+  .section-footer-4 {
+    display: flex;
+    align-items: center;
   }
 
   .section-footer-4 .payment {
@@ -304,11 +346,17 @@ body {
   }
 
   .section-footer-5 {
+    align-items: center;
     max-width: 100%;
     gap: 16px;
   }
 
+  .newsletter {
+    align-items: center;
+  }
+
   .newsletter p {
+    text-align: center;
     font-size: 8px;
   }
 
@@ -333,6 +381,8 @@ body {
   }
 
   .naming-rights {
+    display: flex;
+    justify-content: center;
     max-width: 100%;
     font-size: 6px;
     padding: 4px;
